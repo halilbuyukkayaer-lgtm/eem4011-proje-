@@ -1,0 +1,15 @@
+# Hasta/veri dosyaları depoya yüklenmez
+data/
+veri/
+*.dat
+*.hea
+*.apn
+*.atr
+*.edf
+*.zip
+*.npz
+*.csv
+*.json
+__pycache__/
+.venv/
+.ipynb_checkpoints/
