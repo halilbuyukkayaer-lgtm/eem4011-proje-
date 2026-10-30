@@ -6,7 +6,7 @@ Bu projede PhysioNet Apnea-ECG kayıtlarında ham ve 5–20 Hz süzülmüş R te
 
 **Apnea-ECG Database v1.0.0:** https://physionet.org/content/apnea-ecg/1.0.0/
 
-Veri dosyaları bu depoya yüklenmemiştir. Çalıştırmadan önce 35 öğrenme kaydının `.hea`, `.dat` ve `.apn` dosyaları ile `additional-information.txt` dosyasını PhysioNet'ten indirip yerel `data/` klasörüne koyun. `x01–x35` kayıtları kullanılmaz; `c05` analizden çıkarılır.
+Veri dosyaları bu depoya yüklenmemiştir. Çalıştırmadan önce 35 öğrenme kaydının `.hea`, `.dat` ve `.apn` dosyaları ile `additional-information.txt` dosyasını PhysioNet'ten indirip yerel `data/` klasörüne koyun. `c05` analizden çıkarılır. `x01–x35` kayıtları yalnız sonradan yapılan keşif testlerinde kullanılmıştır; birden fazla yöntem karşılaştırmasında görüldükleri için bağımsız son test olarak yorumlanmaz.
 
 ## Kurulum
 
@@ -34,6 +34,12 @@ export APNEA_DATA_DIR=/verinin/tam/yolu
 .venv/bin/python kod/07_asama3_ozet.py
 .venv/bin/python kod/09_test_kisisi_esik_sekli.py
 .venv/bin/python kod/10_rmssd_ardisik_duyarlilik.py
+.venv/bin/python denemeler/24_edr_gorsel_dogrulama.py
+.venv/bin/python denemeler/25_edr_genlik_alan_tum_veri.py
+.venv/bin/python denemeler/26_edr_gercek_solunum_dogrulama.py
+.venv/bin/python denemeler/27_edr_birlestirme_dogrulama.py
+.venv/bin/python denemeler/28_edr_kalite_agirlikli_fusion_test.py
+.venv/bin/python kod/11_juri_solunum_sekilleri.py
 ```
 
 Ara hesap dosyaları `veri/`, yeni jüri şekilleri `sonuclar/` klasöründe oluşturulur. `data/`, `veri/` ve `.venv/` yereldir; GitHub'ın tarayıcıdan dosya yükleme ekranında bu klasörler seçilmez.
